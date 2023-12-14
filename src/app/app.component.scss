@@ -1,0 +1,19 @@
+.menu nav {
+    text-align: center;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+  
+.menu nav a {
+    transition: 0.3s ease;
+    font-size: 20px;
+    text-decoration: none;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    font-size: 17px;
+}
+
+.menu nav a:hover {
+    border-top: 4px solid rgb(13, 110, 253);
+    border-bottom: 4px solid rgb(13, 110, 253);
+    padding: 6px 0; 
+}

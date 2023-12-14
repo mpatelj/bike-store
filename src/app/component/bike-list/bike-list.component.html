@@ -1,0 +1,52 @@
+<!--navbar-->
+<nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+        <h1>Bikes</h1>
+        <div>
+            <button class="btn btn-success" routerLink="/addbike">Add Bike</button>
+        </div>
+    </div>
+</nav>
+
+<hr>
+
+<div class="container-fluid" *ngIf="data?.length else noData">
+    <div class="row">
+        <!--table-->
+        <div class="col-sm-12">
+            <table class="table table-striped mt-2">
+                <thead>
+                    <tr>
+                        <th scope="col">Brand</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Type</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Quantity</th>
+                        <th scope="col">Rating</th>
+                        <th scope="col" class="col-4">Description</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of data">
+                        <td>{{item.brand}}</td>
+                        <td>{{item.name}}</td>
+                        <td>{{item.type}}</td>
+                        <td>${{item.price}}</td>
+                        <td>{{item.quantity}}</td>
+                        <td><span *ngFor="let num of convertRating(item.rating)"><i class="fas fa-star" style="color: orange;"></i></span></td>
+                        <td>{{item.description}}</td>
+                        <td>
+                            <button type="button" class="btn btn-outline-primary" routerLink="/updatebike/{{item.id}}">Edit</button>&nbsp;
+                            <button type="button" class="btn btn-outline-danger" (click)="deleteBike(item.id!)" >Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<ng-template #noData>
+    No data. Please add.
+</ng-template>
