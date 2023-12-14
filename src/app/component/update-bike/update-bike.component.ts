@@ -25,7 +25,6 @@ export class UpdateBikeComponent {
 
     this.api.fetchdata(this.bikeid).subscribe((data: bike) => {
       this.bikedata = data;
-      console.log(data);
     });
   }
 

@@ -20,8 +20,6 @@ export class AddBikeComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    console.log(this.ratings);
-
     this.bikeform = this.formbuilder.group({
       brand: ['', Validators.required],
       name: ['', Validators.required],
@@ -34,7 +32,6 @@ export class AddBikeComponent implements OnInit {
   }
 
   submitBike(data: bike) {
-    console.log(this.bikeform.value);
     this.api.addbike(data).subscribe((res => {
       this.bikeform.reset();
       this.router.navigate(["/bikelist"]);

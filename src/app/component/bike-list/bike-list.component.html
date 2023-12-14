@@ -10,7 +10,7 @@
 
 <hr>
 
-<div class="container-fluid" *ngIf="data?.length else noData">
+<div class="container-fluid" *ngIf="(data != null && data?.length) else noData">
     <div class="row">
         <!--table-->
         <div class="col-sm-12">
@@ -32,7 +32,7 @@
                         <td>{{item.brand}}</td>
                         <td>{{item.name}}</td>
                         <td>{{item.type}}</td>
-                        <td>${{item.price}}</td>
+                        <td>{{item.price | currency}}</td>
                         <td>{{item.quantity}}</td>
                         <td><span *ngFor="let num of convertRating(item.rating)"><i class="fas fa-star" style="color: orange;"></i></span></td>
                         <td>{{item.description}}</td>

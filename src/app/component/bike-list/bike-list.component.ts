@@ -10,7 +10,6 @@ import { bike } from '../bikemodel';
 export class BikeListComponent implements OnInit {
   data: undefined | bike[];
   rating = Array.from({length: 5}, (_, i) => i + 1);
-  isLoading: boolean = true;
 
   constructor(private api: ApiService) {
 
@@ -21,15 +20,12 @@ export class BikeListComponent implements OnInit {
   }
 
   getBike() {
-    this.isLoading = true;
     this.api.getbike().subscribe(res => {
       this.data = res;
     });
-    this.isLoading = false;
   }
 
   deleteBike(id: number) {
-    console.log(id);
     this.api.deletebike(id).subscribe(res => {
       alert("Bike Deleted Successfully");
       this.getBike();

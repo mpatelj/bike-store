@@ -23,7 +23,6 @@ export class PokemonComponent implements OnInit {
   }
 
   changeURL():void{
-    debugger;
     let pokemon2use = this.customPoke.toLocaleLowerCase();
     this.url = 'https://pokeapi.co/api/v2/pokemon/'+ pokemon2use + '/'
     this.getPoke();

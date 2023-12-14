@@ -1,0 +1,38 @@
+{
+  "posts": [
+    {
+      "brand": "Giant",
+      "name": "GT-500",
+      "type": "Performance",
+      "quantity": 24,
+      "price": 299,
+      "rating": "4",
+      "description": "Best for riding on the paved streets",
+      "id": 1
+    },
+    {
+      "brand": "Trek",
+      "name": "TY900",
+      "type": "Mountain",
+      "quantity": 50,
+      "price": 349,
+      "rating": "5",
+      "description": "Best for mountaing biking with high elevation and steep slopes",
+      "id": 2
+    },
+    {
+      "brand": "Liv",
+      "name": "TYY23",
+      "type": "Electric",
+      "quantity": 14,
+      "price": 2990,
+      "rating": "3",
+      "description": "Best electric bike for long range mileage upto 45 miles",
+      "id": 3
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}
