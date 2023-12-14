@@ -1,0 +1,28 @@
+<div>
+    <h1>
+        Welcome from {{ poke?.name }}!
+    </h1>
+    <img width="300" alt="Pokemon sprite" src={{poke?.sprites.front_default}}>
+
+    <div class="alert alert-info col-lg-4 col-md-10" role="alert">
+        <h4 class="alert-heading">Display Pokemon using PokeApi</h4>
+        <p>Enter name/number of any pokemon you know, if you don't then pick one from following to change the pokemon!</p>
+        <hr>
+        <ul>
+            <li>Bulbasaur</li>
+            <li>Meowth</li>
+            <li>Wartortle</li>
+            <li>Raichu</li>
+            <li>Gastly</li>
+        </ul>
+
+        <div class="g-3">
+            <div class="d-inline-block">
+                <input type="text" class="form-control" [(ngModel)]="customPoke" name="customPoke" placeholder="Enter name">
+            </div>
+            <div class="d-inline-flex m-3">
+                <button type="submit" class="btn btn-primary mb-3" (click)="changeURL()">I CHOOSE YOU!!</button>
+            </div>
+        </div>
+    </div>
+</div>
