@@ -2,6 +2,13 @@
 
 This project is designed to manage bike store which includes CRUD (create, read, update and delete) operations of items.
 
+## Technologies
+
+- Angular
+- Bootstrap
+- Typescript
+- JSON Server (local Storage)
+
 ## Install dependencies
 
 Run `npm install` to install project dependencies.
