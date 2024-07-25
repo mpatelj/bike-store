@@ -5,9 +5,9 @@ This project is designed to manage bike store which includes CRUD (create, read,
 ## Technologies
 
 - Angular
-- Bootstrap
 - Typescript
 - JSON Server (local Storage)
+- HTML/CSS/Bootstrap
 
 ## Install dependencies
 
